@@ -25,4 +25,5 @@ else
     chmod +x /usr/bin/aws-iam-authenticator
     echo "Using aws-iam-authenticator version: $(aws-iam-authenticator version)"
 fi
-eval "RUNNER_TRACKING_ID=\"\" kubectl $*"
+eval "kubectl $*"
+unset RUNNER_TRACKING_ID
