@@ -25,5 +25,4 @@ else
     chmod +x /usr/bin/aws-iam-authenticator
     echo "Using aws-iam-authenticator version: $(aws-iam-authenticator version)"
 fi
-export RUNNER_TRACKING_ID=""
-sh -c "kubectl $*"
+RUNNER_TRACKING_ID="" && kubectl $*
